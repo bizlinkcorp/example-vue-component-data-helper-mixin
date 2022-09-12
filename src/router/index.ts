@@ -1,13 +1,11 @@
-import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
+import { createRouter, RouteRecordRaw, createWebHistory } from 'vue-router';
 import RouteView from '../views/RouteView.vue';
 import MitsumoriView from '../views/MitsumoriView.vue';
 import JuchuView from '../views/JuchuView.vue';
 import HatchuView from '../views/HatchuView.vue';
 import ShukkaView from '../views/ShukkaView.vue';
-Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
@@ -38,9 +36,8 @@ const routes: Array<RouteConfig> = [
   },
 ];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: import.meta.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 

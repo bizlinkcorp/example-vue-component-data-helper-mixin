@@ -9,18 +9,18 @@
   },
   "dependencies": {
     "@mdi/font": "^7.0.96",
-    "vue": "^2.7.10",
-    "vue-component-data-helper-mixin": "^0.1.0",
+    "vue": "^3.2.38",
+    "vue-component-data-helper-mixin": "^1.0.0",
     "vue-persistedstate": "^1.2.5",
-    "vue-router": "^3.6.5",
-    "vuetify": "^2.6.0",
-    "vuex": "^3.6.2"
+    "vue-router": "^4.1.5",
+    "vuetify": "^3.0.0-beta.10",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "@typescript-eslint/parser": "^5.36.2",
-    "@vitejs/plugin-vue2": "^1.1.2",
-    "@vue/eslint-config-typescript": "^11.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/eslint-config-typescript": "^11.0.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -29,8 +29,8 @@
     "sass": "~1.32.13",
     "sass-loader": "^13.0.2",
     "typescript": "~4.8.3",
-    "unplugin-vue-components": "^0.22.6",
-    "vite": "^3.1.0",
+    "vite": "^3.0.9",
+    "vite-plugin-vuetify": "^1.0.0-alpha.15",
     "vite-tsconfig-paths": "^3.5.0",
     "vue-template-compiler": "^2.7.10",
     "vue-tsc": "^0.40.13"

@@ -19,6 +19,7 @@
         </template>
       </v-col>
     </v-row>
+    <!-- FIXME vuetify 3 で v-data-iterator の方向性が定まったら設定する
     <v-row>
       <v-col cols="12">
         <store-path :m-data="`data.${disp.id}`" :m-view-state="`viewState.${disp.id}`">
@@ -26,6 +27,7 @@
         </store-path>
       </v-col>
     </v-row>
+    -->
   </v-container>
 </template>
 <script lang="ts" src="./ProductTemplate.ts" />

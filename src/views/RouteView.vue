@@ -9,7 +9,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { RouteRecordPublic, RouterLink } from 'vue-router';
+import { RouteRecordRaw, RouterLink } from 'vue-router';
 import router from '../router';
 
 export default defineComponent({
@@ -18,11 +18,11 @@ export default defineComponent({
     RouterLink,
   },
   data: () => ({
-    displayRoutes: [] as RouteRecordPublic[],
+    displayRoutes: [] as RouteRecordRaw[],
   }),
   mounted(): void {
     router.getRoutes().forEach((route) => {
-      if (route.path !== '') {
+      if (route.path !== '/') {
         this.displayRoutes.push(route);
       }
     });

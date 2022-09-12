@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue2';
+import vue from '@vitejs/plugin-vue';
+import vuetify from 'vite-plugin-vuetify';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import Components from 'unplugin-vue-components/vite';
-import { VuetifyResolver } from 'unplugin-vue-components/resolvers';
 
 // plugin説明
 //   @vitejs/plugin-vue2 ⇒ vue2 vite 利用の為の plugin
@@ -11,14 +10,11 @@ import { VuetifyResolver } from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   plugins: [
     vue(),
-    tsconfigPaths(),
-    Components({
-      // Vuetify コンポーネントを import するための設定です。
-      resolvers: [VuetifyResolver()],
-      // プロジェクトルートに型定義ファイルを出力してくれるのですが
-      // 型チェックのエラーを解消できなかったため無効化しています。
-      dts: false,
+    // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
+    vuetify({
+      autoImport: true,
     }),
+    tsconfigPaths({ loose: true }),
   ],
   // css: {
   //   devSourcemap: false,

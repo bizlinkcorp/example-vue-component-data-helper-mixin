@@ -1,15 +1,12 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
 import { setStoreState } from 'vue-component-data-helper-mixin';
 import { createVuexPersistedState } from 'vue-persistedstate';
-
-Vue.use(Vuex);
+import { createStore } from 'vuex';
 
 export interface ParentViewState {
   disabled?: boolean;
 }
 
-export default new Vuex.Store({
+export default createStore({
   plugins: [
     createVuexPersistedState({
       key: 'vuex',
