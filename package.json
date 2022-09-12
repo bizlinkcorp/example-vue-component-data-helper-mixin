@@ -7,6 +7,8 @@
     "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
     "lint": "eslint \"./{src}/**/*.{ts,tsx,vue}\" && prettier --check \"./{src}/**/*.{ts,tsx,vue}\""
   },
+  "license": "MIT",
+  "author": "BizLink Co.,Ltd.",
   "dependencies": {
     "@mdi/font": "^7.0.96",
     "vue": "^3.2.38",
