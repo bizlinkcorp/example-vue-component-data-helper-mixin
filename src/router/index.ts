@@ -1,29 +1,46 @@
-import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-
+import Vue from 'vue';
+import VueRouter, { RouteConfig } from 'vue-router';
+import RouteView from '../views/RouteView.vue';
+import MitsumoriView from '../views/MitsumoriView.vue';
+import JuchuView from '../views/JuchuView.vue';
+import HatchuView from '../views/HatchuView.vue';
+import ShukkaView from '../views/ShukkaView.vue';
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "/",
-    name: "home",
-    component: HomeView,
+    path: '/',
+    name: 'home',
+    component: RouteView,
+    meta: {
+      title: 'hoge',
+    },
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: '/mitsumori',
+    name: '見積入力',
+    component: MitsumoriView,
+  },
+  {
+    path: '/juchu',
+    name: '受注入力',
+    component: JuchuView,
+  },
+  {
+    path: '/hatchu',
+    name: '発注入力',
+    component: HatchuView,
+  },
+  {
+    path: '/shukka',
+    name: '出荷入力',
+    component: ShukkaView,
   },
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
+  mode: 'history',
+  base: import.meta.env.BASE_URL,
   routes,
 });
 
