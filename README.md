@@ -31,3 +31,12 @@ npm ci
 ```sh
 npm run serve
 ```
+
+## 本アプリケーション動作サンプル
+
+- https://codesandbox.io/s/example-vue-component-data-helper-mixin-lzb0le
+
+## vue-component-data-helper-mixin example 動作サンプル
+
+- https://codesandbox.io/s/1-getting-started-nmwcgx
+- https://codesandbox.io/s/2-inherit-view-state-rrm96z
